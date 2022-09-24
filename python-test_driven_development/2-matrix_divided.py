@@ -45,3 +45,5 @@ def matrix_divided(matrix, div):
                 raise TypeError(long_error)
 
         new_matrix.append(list(map(lambda num: round(num / div, 2), row)))
+
+    return new_matrix
