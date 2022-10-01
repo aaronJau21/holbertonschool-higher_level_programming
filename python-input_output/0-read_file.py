@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 This program reads files
