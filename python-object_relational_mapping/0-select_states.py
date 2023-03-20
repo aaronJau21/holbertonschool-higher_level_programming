@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
     try:
         db = mysql.connect(host='localhost', port=3306, user=argv[1],
-                        passwd=argv[2], db=argv[3])
+                           passwd=argv[2], db=argv[3])
     except Exception:
         print('Can not connect to the database')
         exit(0)
