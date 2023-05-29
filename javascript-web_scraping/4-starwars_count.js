@@ -1,16 +1,18 @@
 #!/usr/bin/node
-
-const apiUrl = process.argv[2];
-const charToSearch = 18;
 const request = require('request');
-
-request.get(apiUrl, (error, response, body) => {
-    if (error) console.log(error);
-    let films = JSON.parse(body).results;
-    films = films.filter(
-        film => film.characters.find(
-            character => character.match(charToSearch)
-        )
-    );
-    console.log(films.length);
+const url = process.argv[2];
+let count = 0;
+request.get(url, function (err, response, body) {
+  if (err) {
+    console.log(err);
+  } else {
+    const results = JSON.parse(body).results;
+    for (let i = 0; i < results.length; i++) {
+      const cha = results[i].characters;
+      for (let j = 0; j < cha.length; j++) {
+        if (cha[j].slice(cha[j].length - 3, cha[j].length - 1) === '18') { count += 1; }
+      }
+    }
+    console.log(count);
+  }
 });
