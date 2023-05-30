@@ -1,5 +1,5 @@
-const update = $('DIV#update_header');
-const header = $('header');
-$(update).click(function () {
-    header.text('New Header!!!');
+$(document).ready(function () {
+  $('#update_header').click(function () {
+    $('header').innerHTML('New Header!!!');
+  });
 });

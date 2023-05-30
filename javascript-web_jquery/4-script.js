@@ -1,5 +1,5 @@
-const redHeader = $('DIV#toggle_header');
-const header = $('header');
-$(redHeader).click(function () {
-    header.toggleClass('red green');
+$(document).ready(function () {
+  $('#toggle_header').click(function () {
+    $('header').toggleClass('red green');
+  });
 });

@@ -1,5 +1,5 @@
-const addItem = $('DIV#add_item');
-const myList = $('.my_list');
-$(addItem).click(function () {
-    myList.append('<li>Item</li>');
+$(document).ready(function () {
+  $('#add_item').click(function () {
+    $('.my_list').append('<li>Item</li>');
+  });
 });
